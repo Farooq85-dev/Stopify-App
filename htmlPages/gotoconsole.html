@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon -->
+    <link rel="icon" href="../images/display-logo.png" type="png">
+    <!-- Title -->
+    <title>User Profile</title>
+    <!-- BootStrap Css And Js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+    <!-- Fontawesme Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../toggler.css">
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar bg-body-tertiary dashboardNav">
+        <div class="container flex">
+            <form class="d-flex searchdiv" role="search">
+                <a class="navbar-brand text-center " href="#">
+                    <img src="../images/logo.png" alt="Stopify" width="150px">
+                </a>
+                <input class="form-control consoleInput me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="theme-toggle-btn" class="btn btn-outline-success">
+                    <i id="theme-icon" class="fas fa-sun"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+    <!-- Console -->
+    <div class="container">
+        <div class="progress" style="display: none;" id="progressDiv">
+            <div class=" progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+        <div class="mainProfile">
+            <div class="row">
+                <div class="profile1">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="profile1Inner">
+                            <div id="loader3" style="display: none;">
+                                <div class="loader1"> </div>
+                            </div>
+                            <div id="profile1" style="display: none;"
+                                class="d-flex justify-content-between align-items-center flex-column gap-2">
+                                <div class="profileimg">
+                                    <img src="../images/camera.png" alt="profileimg..." id="userPhotoUpload">
+                                    <input type="file" id="inputFile" style="display: none;">
+                                </div>
+                                <p id="userEmail">---</p>
+                                <p id="userVerifyStatus">---</p>
+                                <div class="profile1btns">
+                                    <button id="verifyBtn">Verify</button>
+                                    <button id="uploadBtn" style="display: none;">Upload</button>
+                                    <button id="cancelUploadBtn" style="display: none;">Cancel Upload</button>
+                                    <button id="seeProfileBtn" data-bs-toggle="modal" data-bs-target="#viewDetailsModal"
+                                        style="display: none;">View
+                                        Details</button>
+                                    <button id="logoutBtn">Logout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="profile2">
+                        <div class="d-flex justify-content-center align-items-center ">
+                            <div id="loader2" style="display: none;">
+                                <div class="loader1"> </div>
+                            </div>
+                        </div>
+                        <div id="editDetails">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="text-right">User Details</h4>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6"><label class="labels">Name</label><input type="text"
+                                        class="form-control settings" placeholder="Your Name" id="name"></div>
+                                <div class="col-md-6"><label class="labels">Surname</label><input type="text"
+                                        class="form-control settings" placeholder="Father's Name" id="surname">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mt-2"><label class="labels">Mobile Number</label><input
+                                        type="number" class="form-control settings"
+                                        placeholder="Enter Valid Phone Number" id="mobileNo">
+                                </div>
+                                <div class="col-md-12 mt-2"><label class="labels">Email ID</label><input type="email"
+                                        class="form-control settings" placeholder="Enter Secondary Valid Email"
+                                        id="emailProvided">
+                                </div>
+                                <div class="col-md-12 mt-2"><label class="labels">Area</label><input type="text"
+                                        class="form-control settings" placeholder="Enter Valid Address" id="area"></div>
+                                <div class="col-md-12 mt-2"><label class="labels">Country</label><input type="text"
+                                        class="form-control settings" placeholder="country" id="countryName"></div>
+                            </div>
+                            <div class="mt-3 text-center" id="profile2Btns">
+                                <button id="saveDetailsBtn" type="button">Save</button>
+                                <button id="updateBtn" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#updateDetailsModal">Update</button>
+                                <button id="accountSettingBtn" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#privacyModal">Privacy Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- View Details Modal -->
+    <div class="modal fade" id="viewDetailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">Your Details</h1>
+                    <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <div class="d-flex justify-content-center align-items-center ">
+                        <div id="loader1">
+                            <div class="loader1"> </div>
+                        </div>
+                    </div>
+                    <div id="getDetails" style="display: none;">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="../images/camera.png" alt="Loading..." id="userPhotoSettings1">
+                        </div>
+                        <input type="text" class="get  mt-2 mb-2 col-12" id="getName" disabled>
+                        <input type="text" class="get mb-2 col-12" id="getSurname" disabled>
+                        <input type="text" class="get mb-2 col-12" id="getMobileNumber" disabled>
+                        <input type="text" class="get mb-2 col-12" id="primaryEmail" disabled>
+                        <input type="text" class="get mb-2 col-12" id="secondaryEmail" disabled>
+                        <input type="text" class="get mb-2 col-12" id="getArea" disabled>
+                        <input type="text" class="get mb-2 col-12" id="getCountryName" disabled>
+                        <input type="text" class="get mb-2 col-12" id="getStatus" disabled>
+                        <input type="text" class="get mb-2 col-12" id="getId" disabled>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modalBtn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Update Modal -->
+    <div class="modal fade" id="updateDetailsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">Update Carefully</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="btnClose2"
+                        aria-label="Close"></button>
+                </div>
+                <div class="d-flex justify-content-center align-items-center ">
+                    <div id="loader4" style="display: none;">
+                        <div class="loader1"> </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="updateDetails">
+                        <p>Update any field and then save changs.</p>
+                        <label for="" class="updateLabels">Name:</label>
+                        <input type="text" class="update form-control mt-2 mb-2 col-12" id="updateName">
+                        <label for="" class="updateLabels">Surname:</label>
+                        <input type="text" class="update form-control mb-2 col-12" id="updateSurname">
+                        <label for="" class="updateLabels">Mobile Number:</label>
+                        <input type="text" class="update form-control mb-2 col-12" id="updateMobileNumber">
+                        <label for="" class="updateLabels">Secondary Email:</label>
+                        <input type="text" class="update form-control mb-2 col-12" id="updateSecondaryEmail">
+                        <label for="" class="updateLabels">Area:</label>
+                        <input type="text" class="update form-control mb-2 col-12" id="updateArea">
+                        <label for="" class="updateLabels">Country Name:</label>
+                        <input type="text" class="update form-control mb-2 col-12" id="updateCountryName">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modalBtn" data-bs-dismiss="modal"
+                        id="updateDetailsModalCloseBtn">Close</button>
+                    <button type="button" class="modalBtn" id="updateDetailsBtn">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Privacy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">Update Carefully</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="btnClose2"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex  justify-content-center align-items-center ">
+                        <img src="../images/camera.png" alt="Loading..." id="userPhotoSettings2">
+                    </div>
+                    <div id="PrivacyDetails">
+                        <input type="email" class="form-control edit mt-2 mb-2 col-12" id="oldEmail" disabled>
+                        <input type="email" class="form-control edit mt-2 mb-2 col-12" placeholder="Enter New Email"
+                            id="newEmail">
+                        <button class="mb-2 modalBtn" id="editEmailBtn">Update Email</button>
+                        <input type="password" class="form-control edit mb-2 col-12" placeholder="Enter New Password"
+                            id="newPassword">
+                        <img src="../images/eye-slash-regular.svg" style="cursor: pointer;" alt="Loading..." id="icon4"
+                            width="30px">
+                        <button class="mb-2 modalBtn" id="editPasswordBtn">Update Password</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modalBtn" data-bs-dismiss="modal"
+                        id="privacyModalCloseBtn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Toastr JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Cudtom Js -->
+    <script src="../js/console.js" type="module"></script>
+    <script src="../Js/toggler.js "></script>
+    <script src="../firebase.js" type="module"></script>
+</body>
+
+</html>

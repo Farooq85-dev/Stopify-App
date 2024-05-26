@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon -->
+    <link rel="icon" href="./images/display-logo.png" type="image/png">
+    <!-- Title -->
+    <title>Stopify.com</title>
+    <!-- BootStrap Css And Js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Fontawesme Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Manifest Json -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/images/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#0d1e53" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-xl navbar-light bg-light mynav">
+        <div class="container flex">
+            <a class="navbar-brand mylogo" href="./index.html">
+                <img src="images/logo.png" alt="Stopify" width="150px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navul" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#explore-products">Products</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#explore-section">Services</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#explore-contact">Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#explore-FAQ's">FAQ's</a>
+                    </li>
+                </ul>
+                <form class="d-flex headerbtn">
+                    <button id="installButton" class="btn me-2" id="installApp"><a>Install App</a></button>
+                    <button class="btn me-2" type="submit" id="login"><a
+                            href="./htmlPages/login.html">login</a></button>
+                    <button class="btn btn-outline-success me-2" id="signup" type="button"><a
+                            href="./htmlPages/signup.html">Signup</a></button>
+                    <button class="btn btn-outline-success me-2" type="button" id="consoleBtn"><a
+                            href="./htmlPages/gotoconsole.html">Go to Dashbord</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header Section -->
+
+    <!-- slider -->
+    <div class="container slider">
+        <div id="carouselExampleIndicators" class="carousel slide sliderfixed" data-bs-ride="carousel">
+            <div class="carousel-indicators"><button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0" class="active indicators" aria-current="true"
+                    aria-label="Slide 1"></button><button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1" aria-label="Slide 2" class="indicators"></button><button type="button"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+                    class="indicators"></button><button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="3" aria-label="Slide 4" class="indicators"></button></div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000"><img src="images/slide1.jpg"
+                        class="d-block w-100" alt="Loading..."></div>
+                <div class="carousel-item" data-bs-interval="2000"><img src="images/Slide2.jpg" class="d-block w-100"
+                        alt="Loading...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000"><img src="images/Slide3.jpg" class="d-block w-100 b3"
+                        alt="Loading..."></div>
+                <div class="carousel-item" data-bs-interval="2000"><img src="images/Slide4.jpg" class="d-block w-100 b3"
+                        alt="Loading..."></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Slider Section -->
+
+    <!-- Products Section -->
+    <section id="explore-products">
+        <div id="Home&Lifestyle">
+            <div class="container products">
+                <div class="productsHeading text-center">
+                    <h1>Explore Our Products</h1>
+                </div>
+                <div class="productsSection pt-3 pb-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="bx1P p-3">
+                                <div class="bx1img text-center p-3">
+                                    <img src="images/bx1img.webp" alt="Loading...">
+                                </div>
+                                <div class="description">
+                                    <p class="pd">Dell Latitude 3180</p>
+                                    <span id="orginalPrice" class="pe-3">Rs/- 20,500</span><s>Rs/- 25,505</s>
+                                    <br>
+                                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="bx2P p-3">
+                                <div class="bx2img text-center p-3">
+                                    <img src="images/bx2img.webp" alt="Loading...">
+                                </div>
+                                <div class="description">
+                                    <p class="pd">Dell Latitude 6430</p>
+                                    <span id="orginalPrice" class="pe-3">Rs/- 50,500</span><s>Rs/- 75,505</s>
+                                    <br>
+                                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="bx3P p-3">
+                                <div class="bx3img text-center p-3">
+                                    <img src="images/bx3img.webp" alt="Loading...">
+                                </div>
+                                <div class="description">
+                                    <p class="pd">Apple MacBook</p>
+                                    <span id="orginalPrice" class="pe-3">Rs/- 1000,500</span><s>Rs/- 105,505</s>
+                                    <br>
+                                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="bx4P p-3">
+                                <div class="bx4img text-center p-3">
+                                    <img src="images/bx4img.webp" alt="Loading...">
+                                </div>
+                                <div class="description">
+                                    <p class="pd">Lenovo ThinkPad</p>
+                                    <span id="orginalPrice" class="pe-3">Rs/- 75,450</span><s>Rs/- 95,505</s>
+                                    <br>
+                                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="bx5P p-3">
+                                <div class="bx5img text-center p-3">
+                                    <img src="images/bx5img.webp" alt="Loading...">
+                                </div>
+                                <div class="description">
+                                    <p class="pd">Lenovo Thinkpad x270</p>
+                                    <span id="orginalPrice" class="pe-3">Rs/- 85,359</span><s>Rs/- 89,599</s>
+                                    <br>
+                                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="bx6P p-3">
+                                <div class="bx6img text-center p-3">
+                                    <img src="images/bx6img.webp" alt="Loading...">
+                                </div>
+                                <div class="description">
+                                    <p class="pd">MacBook Air A1466</p>
+                                    <span id="orginalPrice" class="pe-3">$160</span><s>$180</s>
+                                    <br>
+                                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="bx7P p-3">
+                                <div class="bx7img text-center p-3">
+                                    <img src="images/bx7img.webp" alt="Loading...">
+                                </div>
+                                <div class="description">
+                                    <p class="pd">ThinkPad Yoga X380</p>
+                                    <span id="orginalPrice" class="pe-3">Rs/- 50,599</span><s>Rs/- 60,505</s>
+                                    <br>
+                                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <div class="bx8P p-3">
+                                <div class="bx8img text-center p-3">
+                                    <img src="images/bx8img.webp" alt="Loading...">
+                                </div>
+                                <div class="description">
+                                    <p class="pd">ThinkPad T470</p>
+                                    <span id="orginalPrice" class="pe-3">Rs/- 80,500</span><s>Rs/- 78,505</s>
+                                    <br>
+                                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section id="explore-section">
+        <div class="container">
+            <div class="mainHeading text-center">
+                <h1>Explore Our Solutions</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class="bx1">
+                        <div class="icon">
+                            <i class="fa-solid fa-ghost"></i>
+                        </div>
+                        <div class="heading">
+                            <h2>User Management System</h2>
+                        </div>
+                        <div class="description">
+                            <p>
+                                User section serves as a central hub for users to track order history, save shipping
+                                addresses,
+                                and access
+                                exclusive offers, fostering loyalty and repeat purchases.
+                            </p>
+                        </div>
+                        <div class="btnbx1">
+                            <button><a
+                                    href="https://www.egnyte.com/guides/governance/user-management#:~:text=User%20management%20is%20a%20system,as%20well%20as%20monitoring%20usage."
+                                    target="_blank">Discover
+                                    More</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class="bx2">
+                        <div class="icon">
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="heading">
+                            <h2>Online Chat System</h2>
+                        </div>
+                        <div class="description">
+                            <p>
+                                The Online Chat section on an e-commerce website offers instant assistance to customers,
+                                allowing them to ask questions, seek product recommendations, and resolve issues in
+                                real-time, enhancing their shopping experience.</p>
+                        </div>
+                        <div class="btnbx1">
+                            <button><a
+                                    href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwixmuXQ8Z-EAxUbsIMHHVBqCpMYABAAGgJlZg&ase=2&gclid=CjwKCAiAt5euBhB9EiwAdkXWO3YGU706g5geYRRnlBg7mwAxSojKAznfnd3XV1rLv06QB5rmZRVbHxoCXIEQAvD_BwE&ohost=www.google.com&cid=CAESVuD2JFJhHnqYoGLcIREv6pSM3UF5JLCCPUN1Ftpx4FARGq1OepokD8JtqD0F5_pJ8qJKe0OBYttgkha-8fsOZ9X99_bIV7n5DQGenibPwvwg-xI5SHPi&sig=AOD64_2ZOXLdO8qs2tMDzzRmZboKp_-CXw&q&nis=4&adurl&ved=2ahUKEwjK0uDQ8Z-EAxWJ9gIHHazTAhsQ0Qx6BAgHEAE"
+                                    target="_blank">Discover
+                                    More</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class="bx3">
+                        <div class="icon">
+                            <i class="fa-solid fa-signal"></i>
+                        </div>
+                        <div class="heading">
+                            <h2>24-Hour Service</h2>
+                        </div>
+                        <div class="description">
+                            <p>
+                                By providing 24/7 service, the website ensures round-the-clock support, bolstering
+                                customer
+                                trust and satisfaction while addressing inquiries promptly, regardless of the time zone
+                                or
+                                location.
+                            </p>
+                        </div>
+                        <div class="btnbx1">
+                            <button><a href="https://en.wikipedia.org/wiki/24/7_service" target="_blank">Discover
+                                    More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="bx4">
+                        <div class="icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                        <div class="heading">
+                            <h2>Discounts and Promotions</h2>
+                        </div>
+                        <div class="description">
+                            <p>
+                                User section serves as a central hub for users to track order history, save shipping
+                                addresses,
+                                and access.
+                            </p>
+                        </div>
+                        <div class="btnbx1">
+                            <button><a
+                                    href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwixmuXQ8Z-EAxUbsIMHHVBqCpMYABAAGgJlZg&ase=2&gclid=CjwKCAiAt5euBhB9EiwAdkXWO3YGU706g5geYRRnlBg7mwAxSojKAznfnd3XV1rLv06QB5rmZRVbHxoCXIEQAvD_BwE&ohost=www.google.com&cid=CAESVuD2JFJhHnqYoGLcIREv6pSM3UF5JLCCPUN1Ftpx4FARGq1OepokD8JtqD0F5_pJ8qJKe0OBYttgkha-8fsOZ9X99_bIV7n5DQGenibPwvwg-xI5SHPi&sig=AOD64_2ZOXLdO8qs2tMDzzRmZboKp_-CXw&q&nis=4&adurl&ved=2ahUKEwjK0uDQ8Z-EAxWJ9gIHHazTAhsQ0Qx6BAgHEAE"
+                                    target="_blank">Discover
+                                    More</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="bx5">
+                        <div class="icon">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </div>
+                        <div class="heading">
+                            <h2>Reviews and Ratings</h2>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Allow customers to leave reviews and ratings for products, helping other shoppers
+                                make
+                                informed
+                                purchasing decisions.
+                            </p>
+                        </div>
+                        <div class="btnbx1">
+                            <button><a
+                                    href="https://www.tidio.com/blog/ratings-and-reviews/#:~:text=Ratings%20and%20reviews%20are%20feedback,Respond%20to%20feedback"
+                                    target="_blank">Discover
+                                    More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Explore Section -->
+
+    <!-- Contact Section -->
+    <section id="explore-contact">
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+                    <div class="screen-header">
+                        <div class="screen-header-left">
+                            <div class="screen-header-button close"></div>
+                            <div class="screen-header-button minimize"></div>
+                            <div class="screen-header-button maximize"></div>
+                        </div>
+                        <div class="screen-header-right">
+                            <div class="screen-header-ellipsis"></div>
+                            <div class="screen-header-ellipsis"></div>
+                            <div class="screen-header-ellipsis"></div>
+                        </div>
+                    </div>
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>Contact Us </span>
+                            </div>
+                            <div>
+                                <img src="./images/contact-anim.gif" alt="Loading..." width="100%">
+                            </div>
+                            <div class="app-contact">Contact No : +92 319-4338919</div>
+                        </div>
+                        <div class="screen-body-item">
+                            <form action="https://formspree.io/f/xvoewqbe" method="POST">
+                                <div class="app-form">
+                                    <div class="app-form-group">
+                                        <input type="text" name="name" class="app-form-control" placeholder="NAME"
+                                            required>
+                                    </div>
+                                    <div class="app-form-group">
+                                        <input type="email" name="email" class="app-form-control" placeholder="EMAIL"
+                                            required>
+                                    </div>
+                                    <div class="app-form-group">
+                                        <input type="tel" name="contact" class="app-form-control"
+                                            placeholder="CONTACT NO" required>
+                                    </div>
+                                    <div class="app-form-group message">
+                                        <input name="message" class="app-form-control" placeholder="MESSAGE" required>
+                                    </div>
+                                    <div class="app-form-group buttons">
+                                        <button class="send" type="submit">SEND</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ's Section -->
+    <section id="explore-FAQ's">
+        <div class="container">
+            <div class="FaqSection">
+                <div class="accordion-wrapper">
+                    <div class="accordion">
+                        <input type="radio" class="accordian" name="radio-a" id="check1" checked>
+                        <label class="accordion-label" for="check1">How do I place an order?</label>
+                        <div class="accordion-content">
+                            <p>To place an order, simply browse our website, select the items you wish to purchase, and
+                                add them to your shopping cart. Proceed to checkout, where you'll be prompted to enter
+                                your shipping and payment information. Once your order is confirmed, you'll receive an
+                                order confirmation email.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <input type="radio" class="accordian" name="radio-a" id="check2">
+                        <label class="accordion-label" for="check2">What payment methods do you accept?</label>
+                        <div class="accordion-content">
+                            <p>We accept a variety of payment methods, including credit/debit cards
+                                (JazzCash,EasyPaisa), PayPal, Apple Pay, Google Pay, and bank transfers.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <input type="radio" class="accordian" name="radio-a" id="check3">
+                        <label class="accordion-label" for="check3">Can I track my order? </label>
+                        <div class="accordion-content">
+                            <p>Yes, you can track your order by logging into your account and navigating to the
+                                "Order History" section. Once your order has shipped, you'll receive. </p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <input type="radio" class="accordian" name="radio-a" id="check4">
+                        <label class="accordion-label" for="check4">Are my personal and payment details secure? </label>
+                        <div class="accordion-content">
+                            <p>Yes, we take the security of your personal and payment information very seriously.
+                                Our website uses industry-standard encryption technology to protect your data during
+                                transmission. Additionally, we do not store your payment details on our servers.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <input type="radio" class="accordian" name="radio-a" id="check5">
+                        <label class="accordion-label" for="check5">Do you offer international shipping?</label>
+                        <div class="accordion-content">
+                            <p>Yes, we offer international shipping to select countries. Shipping costs and delivery
+                                times may vary depending on the destination. Please check our Shipping Information page
+                                for details. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer  -->
+    <div class="container ">
+        <div class="footerSection">
+            <div class="main">
+                <h1>One Step to Success</h1>
+                <p>Welcome to Stopify, your one-stop destination for all your shopping needs! At Stopify, we're
+                    committed to providing you with an unparalleled online shopping experience that combines
+                    convenience, reliability, and affordability. With a wide range of products spanning from fashion
+                    and electronics to home essentials and more, Stopify brings you the latest trends and must-have
+                    items right at your fingertips. Our user-friendly interface and seamless checkout process make
+                    shopping with us a breeze, while our secure payment options give you peace of mind. Whether
+                    you're shopping for yourself or searching for the perfect gift, Stopify is your gateway to
+                    success in finding everything you need, all in one place. Join us on our journey to success and
+                    let Stopify be your trusted partner in online shopping!</p>
+                <div class="socialMediaIcons">
+                    <a href="https://github.com/Farooq85-dev"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-farooq-b71886295/"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://web.facebook.com/farooq8185"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-to-top-btn" title="Scroll to Top">
+        <i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="./app.js" type="module"></script>
+    <script src="./firebase.js" type="module"></script>
+</body>
+
+</html>

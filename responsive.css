@@ -1,0 +1,135 @@
+@media only screen and (max-width: 1200px) {
+    .navul>ul>li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navul>ul>li>a {
+        margin: 0px !important;
+    }
+
+    .headerbtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .headerbtn button {
+        text-align: center;
+        width: 50%;
+    }
+
+    #login {
+        margin-right: 0px !important;
+    }
+
+    #consoleBtn {
+        margin-top: 10px !important;
+        margin-right: 0px !important;
+    }
+
+    #signup {
+        margin-top: 10px !important;
+        margin-right: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .searchdiv {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile1btns,
+    #profile2Btns {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .profile1 h2 {
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .profile1 h3 {
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    #icon4 {
+        right: 7% !important;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #icon4 {
+        right: 9% !important;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .app-form-group .cancel {
+        margin-bottom: 10px !important;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .mainCards {
+        flex-direction: column;
+    }
+
+    .mainCard2 {
+        flex-direction: column;
+    }
+
+    .bx1,
+    .bx2,
+    .bx3,
+    .bx4,
+    .bx5 {
+        width: 75% !important;
+    }
+}
+
+/* Contacct Css */
+@media screen and (max-width: 520px) {
+    .screen-body {
+        flex-direction: column;
+    }
+
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+
+    .app-title {
+        flex-direction: row;
+    }
+
+    .app-title span {
+        margin-right: 12px;
+    }
+
+    .app-title:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen-body {
+        padding: 40px;
+    }
+
+    .screen-body-item {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .screen-body {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,50 @@
+.dark-mode {
+    background-color: #212121;
+    transition: background-color 1s ease;
+}
+
+.dark-mode p {
+    color: rgb(223, 223, 223);
+}
+
+.dark-mode .modal-title {
+    color: rgb(223, 223, 223);
+}
+
+.dark-mode .profile2 {
+    color: rgb(223, 223, 223);
+}
+
+.dark-mode .modal-body {
+    background-color: rgb(49, 49, 49) !important;
+}
+
+.dark-mode .modal-header {
+    background-color: rgb(49, 49, 49) !important;
+}
+
+.dark-mode .modal-footer {
+    background-color: rgb(49, 49, 49) !important;
+}
+
+.dark-mode .btn-close {
+    opacity: 1 !important;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat !important;
+}
+
+.dark-mode input.edit {
+    background-color: rgb(223, 223, 223);
+}
+
+.dark-mode input.settings {
+    background-color: rgb(223, 223, 223);
+}
+
+.dark-mode input.consoleInput {
+    background-color: rgb(223, 223, 223);
+}
+
+.dark-mode #theme-icon {
+    color: white !important;
+
+}
